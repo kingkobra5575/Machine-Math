@@ -7,6 +7,11 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+document.querySelector('.hamburger').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.nav-menu').classList.toggle('active');
+});
+
 // Close menu when clicking a nav link
 document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
     hamburger.classList.remove('active');
