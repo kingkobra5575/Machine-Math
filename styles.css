@@ -1301,7 +1301,7 @@ footer p {
         position: fixed;
         top: 80px;
         right: -300px; /* Start off-screen to the right */
-        width: 600px;
+        width: 550px;
         height: auto;
         background: #ffffff;
         flex-direction: column;
