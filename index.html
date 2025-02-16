@@ -77,24 +77,24 @@
         </div>
     </footer>
     <script>
-        document.querySelector('.hamburger').addEventListener('click', function() {
-    // Toggle active class on hamburger and nav-links
+document.querySelector('.hamburger').addEventListener('click', function() {
     this.classList.toggle('active');
     document.querySelector('.nav-links').classList.toggle('active');
-    
-    // Toggle body scroll
-    document.body.classList.toggle('no-scroll');
+    document.querySelector('.nav-backdrop').classList.toggle('active');
 });
 
-// Close menu when clicking links
+// Close menu when clicking backdrop or links
+document.querySelector('.nav-backdrop').addEventListener('click', closeMenu);
 document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.hamburger').classList.remove('active');
-        document.querySelector('.nav-links').classList.remove('active');
-        document.body.classList.remove('no-scroll');
-    });
+    link.addEventListener('click', closeMenu);
 });
-    </script>
+
+function closeMenu() {
+    document.querySelector('.hamburger').classList.remove('active');
+    document.querySelector('.nav-links').classList.remove('active');
+    document.querySelector('.nav-backdrop').classList.remove('active');
+}
+</script>
     <script src="script.js"></script>
 </body>
 </html>
