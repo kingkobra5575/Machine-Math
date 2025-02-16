@@ -88,50 +88,6 @@ nav {
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background: #2A3B4D;
-        width: 100%;
-        height: calc(100vh - 70px);
-        transition: 0.3s;
-        padding: 1rem 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-item {
-        margin: 1rem 0;
-        text-align: center;
-    }
-
-    .nav-link {
-        padding: 1rem;
-        display: block;
-    }
-}
 /* Buttons */
 .cta-buttons {
     display: flex;
