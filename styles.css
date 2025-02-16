@@ -1259,5 +1259,38 @@ footer p {
 }
 
 
-nav { z-index: 1000; }
-.nav-links { z-index: 999; }
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .bar {
+        width: 3px;
+        height: 25px;
+        background: #2d3748;
+        transition: all 0.3s ease;
+    }
+
+    /* Vertical lines animation */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px);
+    }
+
+    .nav-links.active {
+        display: flex;
+        left: 0;
+    }
+}
