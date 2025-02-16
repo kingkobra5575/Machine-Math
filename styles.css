@@ -1257,3 +1257,7 @@ footer p {
 .info-item a:hover {
     color: #059669;
 }
+
+
+nav { z-index: 1000; }
+.nav-links { z-index: 999; }
