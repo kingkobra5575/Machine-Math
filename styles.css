@@ -41,6 +41,74 @@ nav {
     color: #10B981;
 }
 
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    nav {
+        padding: 3px 20px;
+    }
+
+    .logo {
+        height: 70px; /* Adjust logo size for mobile */
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px; /* Adjust based on header height */
+        left: -100%;
+        flex-direction: column;
+        background: #ffffff;
+        width: 100%;
+        height: calc(100vh - 80px);
+        margin-left: 0;
+        gap: 0;
+        transition: all 0.5s ease;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+    .nav-links a {
+        padding: 20px;
+        font-size: 18px;
+        color: #2d3748;
+        border-bottom: 1px solid #e2e8f0;
+        text-align: center;
+    }
+
+    .nav-links a:hover {
+        background: #f7fafc;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .hamburger .bar {
+        width: 30px;
+        height: 3px;
+        background: #2d3748;
+        transition: all 0.3s ease;
+    }
+
+    /* Hamburger animation */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+}
+
 /* Hero Section */
 .hero {
     position: relative;
