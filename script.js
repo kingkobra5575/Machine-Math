@@ -51,14 +51,19 @@ document.querySelectorAll('.see-more-btn').forEach(button => {
 
 
 document.querySelector('.hamburger').addEventListener('click', function() {
+    // Toggle active class on hamburger and nav-links
     this.classList.toggle('active');
     document.querySelector('.nav-links').classList.toggle('active');
+    
+    // Toggle body scroll
+    document.body.classList.toggle('no-scroll');
 });
 
-// Close menu when clicking a link
+// Close menu when clicking links
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         document.querySelector('.hamburger').classList.remove('active');
         document.querySelector('.nav-links').classList.remove('active');
+        document.body.classList.remove('no-scroll');
     });
 });
