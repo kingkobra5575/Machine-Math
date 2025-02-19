@@ -1559,21 +1559,6 @@ footer p {
     transform: none !important;
 }
 
-/* Keep animations for Index and About pages */
-.index-page .hamburger .bar,
-.about-page .hamburger .bar {
-    transition: all 0.3s ease !important;
-}
-
-.index-page .hamburger.active .bar:nth-child(1),
-.about-page .hamburger.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px) !important;
-}
-
-.index-page .hamburger.active .bar:nth-child(3),
-.about-page .hamburger.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px) !important;
-}
 /* Default state - no transition */
 .hamburger .bar {
     transition: none;
