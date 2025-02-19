@@ -1536,15 +1536,16 @@ footer p {
 
 
 
-/* Unified Mobile Navigation Styles */
+
+/* Unified Active State for All Pages */
 @media (max-width: 768px) {
-  /* Hamburger Icon Consistency Fix */
+  /* Base Hamburger Styles */
   .hamburger .bar {
-    background: #2d3748 !important; /* Force dark color */
+    background: #2d3748 !important;
     width: 25px !important;
     height: 3px !important;
-    margin: 3px 0 !important;
-    transition: all 0.3s ease !important;
+    margin: 4px 0 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
   /* Active State Animation */
@@ -1552,37 +1553,16 @@ footer p {
     background: #2d3748 !important;
   }
 
-  /* About Page Specific Override */
-  .about-page nav .hamburger .bar {
-    background: #2d3748 !important; /* Match other pages */
-  }
-
-  /* Ensure contrast on different backgrounds */
-  nav.dark-header .hamburger .bar {
+  /* Dark Header Variation */
+  nav.dark-header .hamburger .bar,
+  nav.dark-header .hamburger.active .bar {
     background: #ffffff !important;
   }
-}
-/* Consistent Navigation Icon for All Pages */
-@media (max-width: 768px) {
-  /* Solutions Page */
-  .solutions-page nav .hamburger .bar,
-  /* Contact Page */
-  .contact-page nav .hamburger .bar {
-    background: #2d3748 !important;
-    width: 25px !important;
-    height: 3px !important;
-    margin: 3px 0 !important;
-  }
 
-  /* Active State Animation */
-  .solutions-page .hamburger.active .bar,
-  .contact-page .hamburger.active .bar {
+  /* Page-Specific Overrides */
+  .about-page nav:not(.dark-header) .hamburger.active .bar,
+  .solutions-page nav:not(.dark-header) .hamburger.active .bar,
+  .contact-page nav:not(.dark-header) .hamburger.active .bar {
     background: #2d3748 !important;
-  }
-
-  /* Dark Header Variant */
-  .solutions-page nav.dark-header .hamburger .bar,
-  .contact-page nav.dark-header .hamburger .bar {
-    background: #ffffff !important;
   }
 }
