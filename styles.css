@@ -1537,32 +1537,40 @@ footer p {
 
 
 
-/* Unified Active State for All Pages */
-@media (max-width: 768px) {
-  /* Base Hamburger Styles */
-  .hamburger .bar {
-    background: #2d3748 !important;
-    width: 25px !important;
-    height: 3px !important;
-    margin: 4px 0 !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  }
+/* Disable transition on Solutions and Contact pages */
+.solutions-page .hamburger .bar,
+.contact-page .hamburger .bar {
+    transition: none !important;
+}
 
-  /* Active State Animation */
-  .hamburger.active .bar {
-    background: #2d3748 !important;
-  }
+.solutions-page .hamburger.active .bar,
+.contact-page .hamburger.active .bar {
+    transition: none !important;
+}
 
-  /* Dark Header Variation */
-  nav.dark-header .hamburger .bar,
-  nav.dark-header .hamburger.active .bar {
-    background: #ffffff !important;
-  }
+/* Reset transformations for Solutions and Contact pages */
+.solutions-page .hamburger.active .bar:nth-child(1),
+.contact-page .hamburger.active .bar:nth-child(1) {
+    transform: none !important;
+}
 
-  /* Page-Specific Overrides */
-  .about-page nav:not(.dark-header) .hamburger.active .bar,
-  .solutions-page nav:not(.dark-header) .hamburger.active .bar,
-  .contact-page nav:not(.dark-header) .hamburger.active .bar {
-    background: #2d3748 !important;
-  }
+.solutions-page .hamburger.active .bar:nth-child(3),
+.contact-page .hamburger.active .bar:nth-child(3) {
+    transform: none !important;
+}
+
+/* Keep animations for Index and About pages */
+.index-page .hamburger .bar,
+.about-page .hamburger .bar {
+    transition: all 0.3s ease !important;
+}
+
+.index-page .hamburger.active .bar:nth-child(1),
+.about-page .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px) !important;
+}
+
+.index-page .hamburger.active .bar:nth-child(3),
+.about-page .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px) !important;
 }
