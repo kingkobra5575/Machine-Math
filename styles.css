@@ -1562,3 +1562,27 @@ footer p {
     background: #ffffff !important;
   }
 }
+/* Consistent Navigation Icon for All Pages */
+@media (max-width: 768px) {
+  /* Solutions Page */
+  .solutions-page nav .hamburger .bar,
+  /* Contact Page */
+  .contact-page nav .hamburger .bar {
+    background: #2d3748 !important;
+    width: 25px !important;
+    height: 3px !important;
+    margin: 3px 0 !important;
+  }
+
+  /* Active State Animation */
+  .solutions-page .hamburger.active .bar,
+  .contact-page .hamburger.active .bar {
+    background: #2d3748 !important;
+  }
+
+  /* Dark Header Variant */
+  .solutions-page nav.dark-header .hamburger .bar,
+  .contact-page nav.dark-header .hamburger .bar {
+    background: #ffffff !important;
+  }
+}
