@@ -1532,3 +1532,23 @@ footer p {
     overflow-y: auto;
   }
 }
+
+
+
+
+
+/* About Page Mobile Layout */
+@media (max-width: 768px) {
+  .about-page .mission-vision {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .about-page .services-list {
+    column-count: 1 !important;
+  }
+  
+  .about-page .mv-card {
+    margin-bottom: 1.5rem !important;
+  }
+}
