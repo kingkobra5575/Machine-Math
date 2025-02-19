@@ -140,6 +140,24 @@
       });
     }
     </script>
-        
+    <script>
+document.querySelector('.hamburger').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.nav-links').classList.toggle('active');
+    document.querySelector('.nav-backdrop').classList.toggle('active');
+});
+
+// Close menu when clicking backdrop or links
+document.querySelector('.nav-backdrop').addEventListener('click', closeMenu);
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
+function closeMenu() {
+    document.querySelector('.hamburger').classList.remove('active');
+    document.querySelector('.nav-links').classList.remove('active');
+    document.querySelector('.nav-backdrop').classList.remove('active');
+}
+</script>    
 </body>
 </html>
