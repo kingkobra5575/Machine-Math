@@ -1532,3 +1532,33 @@ footer p {
     overflow-y: auto;
   }
 }
+
+
+
+
+/* Unified Mobile Navigation Styles */
+@media (max-width: 768px) {
+  /* Hamburger Icon Consistency Fix */
+  .hamburger .bar {
+    background: #2d3748 !important; /* Force dark color */
+    width: 25px !important;
+    height: 3px !important;
+    margin: 3px 0 !important;
+    transition: all 0.3s ease !important;
+  }
+
+  /* Active State Animation */
+  .hamburger.active .bar {
+    background: #2d3748 !important;
+  }
+
+  /* About Page Specific Override */
+  .about-page nav .hamburger .bar {
+    background: #2d3748 !important; /* Match other pages */
+  }
+
+  /* Ensure contrast on different backgrounds */
+  nav.dark-header .hamburger .bar {
+    background: #ffffff !important;
+  }
+}
